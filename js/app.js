@@ -1,15 +1,15 @@
 import * as THREE from "three";
 
-import Scene from "/js/scene";
-import Renderer from "/js/renderer";
-import Controls from "/js/controls";
-import Camera from "/js/camera";
-import Lights from "/js/lights";
-import Events from "/js/events";
-import Animator from "/js/animator";
+import Scene from "./scene";
+import Renderer from "./renderer";
+import Controls from "./controls";
+import Camera from "./camera";
+import Lights from "./lights";
+import Events from "./events";
+import Animator from "./animator";
 
-import fragment from "../shader/fragment.glsl";
-import vertex from "../shader/vertex.glsl";
+import fragment from "../shader/fragment.js";
+import vertex from "../shader/vertex.js";
 
 class Sketch {
   constructor() {
