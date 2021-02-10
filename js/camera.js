@@ -7,7 +7,7 @@ class Controls {
 
     this.camera = new THREE.PerspectiveCamera(
       75,
-      window.innerWidth / window.innerHeight,
+      this.sketch.sizes.width / this.sketch.sizes.height,
       1,
       200
     );

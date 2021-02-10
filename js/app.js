@@ -13,6 +13,10 @@ import vertex from "../shader/vertex.js";
 
 class Sketch {
   constructor() {
+    this.sizes = {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
     this.scene = new Scene(this);
     this.renderer = new Renderer(this);
     this.camera = new Camera(this);

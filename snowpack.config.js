@@ -10,7 +10,7 @@ module.exports = {
     /* ... */
   ],
   packageOptions: {
-    source: 'remote'
+    source: 'local'
   },
   devOptions: {
     /* ... */
