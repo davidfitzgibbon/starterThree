@@ -8,6 +8,10 @@ class Renderer {
     this.renderer.setSize(this.sketch.sizes.width, this.sketch.sizes.height);
     this.renderer.setPixelRatio(Math.min(2, window.devicePixelRatio));
     this.renderer.shadowMap.enabled = true;
+    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    this.renderer.physicallyCorrectLights = true;
+    this.renderer.outputEncoding = THREE.sRGBEncoding;
+    this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
 
     this.renderer.update = this.update.bind(this.sketch);
 
