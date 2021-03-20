@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-class Scene {
+class Lights {
   constructor(sketch, settings) {
     this.sketch = sketch;
     this.settings = { ...settings };
@@ -18,4 +18,4 @@ class Scene {
     this.sketch.scene.add(dirLight);
   }
 }
-export default Scene;
+export default Lights;

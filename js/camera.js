@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-class Controls {
+class Camera {
   constructor(sketch, settings) {
     this.sketch = sketch;
     this.settings = { ...settings };
@@ -19,4 +19,4 @@ class Controls {
     return this.camera;
   }
 }
-export default Controls;
+export default Camera;
