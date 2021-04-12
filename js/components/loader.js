@@ -5,12 +5,15 @@ class Loader {
       load: () => {
         console.log("loaded");
       },
-      progress: () => true,
+      progress: (itemURL, itemsLoaded, itemsTotal) => {
+        console.log("%loaded:", itemsLoaded / itemsTotal);
+      },
       ...settings,
     };
     this.manager = new THREE.LoadingManager(
       () => this.settings.load(),
-      () => this.settings.progress()
+      (itemURL, itemsLoaded, itemsTotal) =>
+        this.settings.progress(itemURL, itemsLoaded, itemsTotal)
     );
   }
 }
