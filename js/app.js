@@ -1,12 +1,12 @@
 import * as THREE from "three";
 
-import Scene from "./scene";
-import Renderer from "./renderer";
-import Controls from "./controls";
-import Camera from "./camera";
-import Lights from "./lights";
-import Events from "./events";
-import Animator from "./animator";
+import Scene from "./components/scene";
+import Renderer from "./components/renderer";
+import Controls from "./components/controls";
+import Camera from "./components/camera";
+import Lights from "./components/lights";
+import Events from "./components/events";
+import Animator from "./components/animator";
 
 import fragment from "../shader/fragment.js";
 import vertex from "../shader/vertex.js";
@@ -24,6 +24,12 @@ class Sketch {
     this.controls = new Controls(this);
     this.events = new Events(this);
     this.animator = new Animator(this);
+    this.loader = new Loader(this, {
+      load: () => {
+        this.setUpMaterials();
+        this.resetMaterials();
+      },
+    });
   }
   init() {
     this.addObjects();
