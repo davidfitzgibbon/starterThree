@@ -7,6 +7,7 @@ import Camera from "./components/camera";
 import Lights from "./components/lights";
 import Events from "./components/events";
 import Animator from "./components/animator";
+import Loader from "./components/loader";
 
 import fragment from "../shader/fragment.js";
 import vertex from "../shader/vertex.js";
