@@ -1,5 +1,6 @@
 import * as THREE from "three";
 
+import gui from "./gui";
 import Scene from "./components/scene";
 import Renderer from "./components/renderer";
 import Controls from "./components/controls";
@@ -14,6 +15,7 @@ import vertex from "../shader/vertex.js";
 
 class Sketch {
   constructor() {
+    this.gui = gui;
     this.sizes = {
       width: window.innerWidth,
       height: window.innerHeight,
@@ -31,6 +33,8 @@ class Sketch {
         this.resetMaterials();
       },
     });
+    this.clock = new THREE.Clock();
+    this.clock.start();
   }
   init() {
     this.addObjects();
