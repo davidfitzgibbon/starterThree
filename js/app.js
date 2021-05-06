@@ -16,6 +16,7 @@ import vertex from "../shader/vertex.js";
 class Sketch {
   constructor() {
     this.gui = gui;
+    this.animator = new Animator(this);
     this.sizes = {
       width: window.innerWidth,
       height: window.innerHeight,
@@ -26,7 +27,6 @@ class Sketch {
     this.lights = new Lights(this);
     this.controls = new Controls(this);
     this.events = new Events(this);
-    this.animator = new Animator(this);
     this.loader = new Loader(this, {
       load: () => {
         this.setUpMaterials();
