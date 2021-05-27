@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-import gui from "./gui";
+import gui from "./components/gui";
 import Scene from "./components/scene";
 import Renderer from "./components/renderer";
 import Controls from "./components/controls";
