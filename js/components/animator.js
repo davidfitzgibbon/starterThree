@@ -1,5 +1,3 @@
-import * as THREE from "three";
-
 class Animator {
   constructor(sketch, settings) {
     this.sketch = sketch;
