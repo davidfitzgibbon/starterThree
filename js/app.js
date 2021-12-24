@@ -29,15 +29,20 @@ class Sketch {
     this.events = new Events(this);
     this.loader = new Loader(this, {
       load: () => {
-        this.setUpMaterials();
-        this.resetMaterials();
+        this.addObjects();
       },
     });
     this.clock = new THREE.Clock();
     this.clock.start();
   }
   init() {
+    //load texture
+    // const textureLoader = new THREE.TextureLoader(this.loader.manager);
+    // const texture = textureLoader.load('path/img.jpg');
+
+    // load immmediately
     this.addObjects();
+
     document.body.appendChild(this.renderer.domElement);
     this.animator.animate();
   }
